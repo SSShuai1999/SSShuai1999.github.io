@@ -14,7 +14,7 @@
 <meta property="og:description" content="Lambda 演算是什么？  计算机科学，尤其是编程语言，经常倾向使用一种特定的演算：Lambda 演算（Lambda Calculus）。  这种演算也广泛地被逻辑学家用于学习计算机和离散数学的结构本质。Lambda 演算伟大的原因有很多，其中包括：· 非常简单。· 图灵完备。· 容易读写。· 语义足够强大，可以从它开始做推理。· 它有一个很好的实体模型。· 容易创建变种，以便我们探索各种构建">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-09-19T06:22:11.000Z">
-<meta property="article:modified_time" content="2021-10-25T06:59:00.432Z">
+<meta property="article:modified_time" content="2021-10-25T07:44:20.786Z">
 <meta property="article:author" content="SSShuai1999">
 <meta property="article:tag" content="SSShuai1999, ssshuai1999">
 <meta name="twitter:card" content="summary">
@@ -202,9 +202,9 @@ Alpha 是一个重命名操作；
 Beta 基本上是说，如果有一个函数应用，可以对这个这个函数体中，对应函数标识符相关的部分做替换，替换的方法是标识符用参数值替换。
 e.g.
 
-<pre class="line-numbers language-none"><code class="language-none">(lambda x . xx) 2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">(lambda x . x * x) 2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>Beta 规约，我们将 2 这个参数代入 lambda x 函数中，也就是将函数体中所有 x 都替换成 2 。<br>结果就是 22，结果为 4。<br>一个复杂点的例子：</p>
+<p>Beta 规约，我们将 2 这个参数代入 lambda x 函数中，也就是将函数体中所有 x 都替换成 2 。<br>结果就是 2 * 2，结果为 4。<br>一个复杂点的例子：</p>
 <pre class="line-numbers language-none"><code class="language-none">(lambda y . (lambda x . x + y)) q<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>注意，这个 Lambda 表达式跟上面看起来不太一样，这个 Lambda 的结果是另一个 Lambda 表达式。<br>也就是说，它是一个创建函数的函数，这个时候的 Beta 规约，需要用标识符 “q” 替换所有的绑定参数 “y”。所以结果是：</p>
